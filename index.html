@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+	<title>Brigita CV</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	<div class="background"> 
+	<div class="nav">
+		<a class="a" href="#">Home</a>
+		<a class="b" href="#">About Me</a>
+		<a class="c" href="#">Skill & Language</a>
+		<a class="d" href="#">Experiences</a>
+	<div class="polaroid" style="position: relative;left: 470px;top: -85px;height: 590px">
+		<img src="img/dufan.jpg" width="565" height="480" style="position: relative;left: 36px; top: -352px" >
+		<div class="container" style="position: relative;top: -315px;left:10px">
+		<p> hi,i am Brigita Tenggehi</p>
+	</div>
+	</div>
+	</div>
+	</div>
+<div class="content">
+</div>
+<div class="aboutme" style="position: relative;top: -450px;left:20px">
+	<p><b>My name is Brigita Tenggehi.</b><br>
+	I was born on July 29th 1999.<br>
+	I used to live in Manado City with my parents,but now I live in Bandung and study at Telkom University.<br>
+	I am currently in 4th Semester,<br>
+	studying informatics in Telkom University.</p>
+	<p>I graduated from St. Theresia Elementary School,
+	then graduated from Pax Christi Junior High School<br>
+	and graduated from SMA Negeri 7 Manado.<br>
+	<b>Contact Person</b><br> 
+	Phone : +6282191319979<br>
+	Email : brigitatenggehi1@gmail.com</p>
+</div>
+
+<div class="center">
+	<h1>My Personal Skill and Language</h1>
+	<div class="skillbox">
+		<p> Media Social Management</p>
+		<p>85%</p>
+		<div class="skill">
+			<div class="skill_level" style="width: 85%"></div>
+		</div>
+	</div>
+	<div class="skillbox">
+		<p> Image & Design Tools </p>
+		<p>80%</p>
+		<div class="skill">
+			<div class="skill_level" style="width: 80%"></div>
+		</div>
+	<div class="skillbox">
+		<p> Indonesia </p>
+		<p>90%</p>
+		<div class="skill">
+			<div class="skill_level" style="width: 90%"></div>
+		</div>
+	<div class="skillbox">
+		<p> English </p>
+		<p>80%</p>
+		<div class="skill">
+			<div class="skill_level" style="width: 80%"></div>
+		</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="experiences" style="position: relative;top: -400px;left:20px">
+	<p><b>My Experiences</b><br>
+	- Volleyball athletes (2012-2013)<br>
+	- Member of Student Council (2014-2017)<br>
+	- Member of Public Relation Division "Hello World" (2018)<br>
+	</p>
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('a').click(function(){
+			var selected = $ (this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+
+		});
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d'),
+		$polaroid = $('.polaroid'),
+		$aboutme = $('.aboutme'),
+		$center = $('.center'),
+		$experiences = $('.experiences');
+
+		$a.click(function(){
+			$polaroid.fadeIn();
+			$aboutme.fadeOut();
+			$center.fadeOut();
+			$experiences.fadeOut();
+		});
+		$b.click(function(){
+			$aboutme.fadeIn();
+			$polaroid.fadeOut();
+			$center.fadeOut();
+			$experiences.fadeOut();
+		});
+		$c.click(function(){
+			$center.fadeIn();
+			$polaroid.fadeOut();
+			$aboutme.fadeOut();
+			$experiences.fadeOut();
+		});
+		$d.click(function(){
+			$experiences.fadeIn();
+			$polaroid.fadeOut();
+			$aboutme.fadeOut();
+			$center.fadeOut();
+		});
+	});
+</script>
+</body>
+</html>
